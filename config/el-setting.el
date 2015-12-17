@@ -136,7 +136,7 @@
 
   (if (eq system-type 'windows-nt)
       (setq go-run-command "go run %s")
-    (setq go-run-command "source ~/.bashrc && go run %s"))
+    (setq go-run-command "go run %s"))
   (compile
    (format go-run-command
            (buffer-file-name))))
@@ -148,7 +148,7 @@
 
   (if (eq system-type 'windows-nt)
       (setq go-run-command "go run *.go")
-    (setq go-run-command "source ~/.bashrc && go run *.go"))
+    (setq go-run-command "go run *.go"))
   (compile
    (format go-run-command
            (buffer-file-name))))
